@@ -7,7 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Ensure -Wall -Wextra -Werror flags are set (MSVC uses different flags)
 if(MSVC)
-  add_compile_options(/W4 /WX)
+  add_compile_options(/W4 /WX /wd4127 /wd5054)
 else()
   add_compile_options(-Wall -Wextra -Werror)
 endif()
